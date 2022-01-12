@@ -14,7 +14,7 @@ $i = 0;
                     <li style="background-color: yellow; font-weight: bolder ; " >{{$as["id"]}} . {{$as["content"]}} @if($as["isCheck"]==true) <span style="color: red">Bạn chọn</span> @endif </li>
                 @else
                     <li style="font-weight: bolder ; " >{{$as["id"]}} . {{$as["content"]}} @if($as["isCheck"]==true) <span style="color: red">Bạn chọn</span> @endif
-                        @if($q["answer"]!= $as["id"] && $as["isCheck"]==true) <span style="background-color: red">Bạn Sai câu này</span> @endif
+{{--                        @if($q["answer"]!= $as["id"] && $as["isCheck"]==true) <span style="background-color: red">Bạn Sai câu này</span> @endif--}}
                     </li>
                 @endif
             @endforeach

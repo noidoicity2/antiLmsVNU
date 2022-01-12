@@ -16,4 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[\App\Http\Controllers\SingleQuestionController::class, 'getQuestion'] );
 Route::get('q' , [\App\Http\Controllers\ClassQuestionController::class , 'getQuestion']);
 Route::get('r' , [\App\Http\Controllers\ResultController::class , 'getQuestion']);
+Route::get('qid' , [\App\Http\Controllers\AnswerController::class , 'getQuestionIdByForm']);
+
 

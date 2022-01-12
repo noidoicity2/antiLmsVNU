@@ -120,10 +120,10 @@ class SingleQuestionController extends Controller
 //                'testFormId' => '9a6c342a-edff-42bc-9713-2506a0450d8b',
 //                'classContentId' => '7efc6391-a9b9-40af-a00a-a8f3ebe10fe5'
 //            ],
-            'bai thi' => [
-                'testFormId' => '4a1a4763-8801-4a9c-9ed3-df3a1866309f',
-                'classContentId' => '2356fc92-27ce-4e15-98dc-ac59d407cb0f'
-            ],
+//            'bai thi' => [
+//                'testFormId' => '4a1a4763-8801-4a9c-9ed3-df3a1866309f',
+//                'classContentId' => '2356fc92-27ce-4e15-98dc-ac59d407cb0f'
+//            ],
 //            'bai thi2' => [
 //                'testFormId' => '9a6c342a-edff-42bc-9713-2506a0450d8b',
 //                'classContentId' => '4a5375a7-35fc-41c8-98df-1640b9ab4434'
@@ -136,6 +136,10 @@ class SingleQuestionController extends Controller
 //                'testFormId' => 'ad7b3363-f4d5-4c05-be6c-07e885d49b94',
 //                'classContentId' => '2b57fccb-95c0-49b3-bb47-8d1a4631fe26'
 //            ],
+            'bai thi2' => [
+                'testFormId' => 'cef48e08-4d16-4880-9aee-e89aea8e3263',
+                'classContentId' => 'd345bf43-bdec-4c11-87ac-944affa62f89'
+            ],
 
 
 

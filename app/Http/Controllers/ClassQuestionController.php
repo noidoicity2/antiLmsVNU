@@ -94,14 +94,14 @@ class ClassQuestionController extends Controller
 //                'classContentId' => '4ff564fd-df2f-45fc-b43b-e8ffecfa552d'
 //            ],
 
-            'a9-nhanthuc' => [
-                'testFormId' => '40514407-7777-4825-b943-16f75d03aa0a',
-                'classContentId' => 'e15caf91-4b6c-4195-8b20-8e510c897b05'
-            ],
-            'a9-cuoibai' => [
-                'testFormId' => 'd5c5d11b-90da-410f-89db-a0ef941f9b1c',
-                'classContentId' => '09f59784-1e6e-4b1a-b17d-5e096ef08a09'
-            ],
+//            'a9-nhanthuc' => [
+//                'testFormId' => '40514407-7777-4825-b943-16f75d03aa0a',
+//                'classContentId' => 'e15caf91-4b6c-4195-8b20-8e510c897b05'
+//            ],
+//            'a9-cuoibai' => [
+//                'testFormId' => 'd5c5d11b-90da-410f-89db-a0ef941f9b1c',
+//                'classContentId' => '09f59784-1e6e-4b1a-b17d-5e096ef08a09'
+//            ],
 //            'a10-nhanthuc' => [
 //                'testFormId' => '4a5375a7-35fc-41c8-98df-1640b9ab4434',
 //                'classContentId' => '138642e9-88e2-49fb-8bec-fb980a1a4c5d'
@@ -114,13 +114,13 @@ class ClassQuestionController extends Controller
 //                'testFormId' => 'b7a17d25-75a4-405f-8a24-0026bf05252d',
 //                'classContentId' => '69bc43c5-72db-4004-9a9f-7f745d3be81c'
 //            ],
-            'bai thi' => [
-                'testFormId' => '9a6c342a-edff-42bc-9713-2506a0450d8b',
-                'classContentId' => '7efc6391-a9b9-40af-a00a-a8f3ebe10fe5'
-            ],
+//            'bai thi' => [
+//                'testFormId' => '9a6c342a-edff-42bc-9713-2506a0450d8b',
+//                'classContentId' => '7efc6391-a9b9-40af-a00a-a8f3ebe10fe5'
+//            ],
             'bai thi2' => [
-                'testFormId' => '9a6c342a-edff-42bc-9713-2506a0450d8b',
-                'classContentId' => '4a5375a7-35fc-41c8-98df-1640b9ab4434'
+                'testFormId' => 'cef48e08-4d16-4880-9aee-e89aea8e3263',
+                'classContentId' => 'd345bf43-bdec-4c11-87ac-944affa62f89'
             ],
 //            'd12-nhanthuc' => [
 //                'testFormId' => 'f8f23127-011f-4fd5-9e7e-195a5d3f50d1',
@@ -136,32 +136,35 @@ class ClassQuestionController extends Controller
         ];
 //        $client = new  Client();
         $headers = [
-            "Authorization" => "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjAwNTU2QzAzRkZBQTE5NTJCQUVGRTgxQzI1QjY0RDJFNDAxOUI3OTYiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJBRlZzQV8tcUdWSzY3LWdjSmJaTkxrQVp0NVkifQ.eyJuYmYiOjE2NDE5MTIyOTksImV4cCI6MTY0MjAwMjI5OSwiaXNzIjoiaHR0cDovL2xtcy52bnUuZWR1LnZuIiwiYXVkIjpbIkF1dGhlbnRpY2F0aW9uIiwiQXV0aG9yaXphdGlvbiIsIkhyIiwiTE1TIiwiTG9jYWxpemF0aW9uIiwiTG9nIiwiTmF2aWdhdGlvbiIsIk5vdGlmaWNhdGlvbiIsIlRlc3QiXSwiY2xpZW50X2lkIjoid2ViIiwic3ViIjoiRERQMDYwMTAwNCIsImF1dGhfdGltZSI6MTY0MTkxMjI5OSwiaWRwIjoibG9jYWwiLCJ1c2VyaWQiOiI1ZjEzOGI0OS03ZmVhLTRiMTctYjk5OC05M2E2MjZmNDk0OGMiLCJ1c2VybmFtZSI6IkREUDA2MDEwMDQiLCJkaXNwbGF5bmFtZSI6Ik5ndXnhu4VuIENodSBLaOG6oyBIw6JuIiwiZnVsbG5hbWUiOiJOZ3V54buFbiBDaHUgS2jhuqMgSMOibiIsImVtYWlsIjoiIiwiZW1haWxzIjoiIiwiaXNzdXBlcnVzZXIiOiJmYWxzZSIsInVzZXJlbmNyeXB0IjoicUhEUUVyRnE4L0ZFQXp2b3JxWXh2QT09Iiwic2Vzc2lvbmlkIjoiMGQ1YTIzMGYtODMwMi00YjQ1LTk3ODEtNTg1ODBlNGNkMDJiIiwidXNlcnR5cGUiOiJPdGhlciIsInRpbWV6b25lQ29kZSI6IlVUQyswNzowMCIsImlkR0dNZWV0IjoiIiwiaWRNU1RlYW0iOiIiLCJpZFpvb20iOiIiLCJhdmF0YXIiOiIiLCJwZXJtaXNzaW9ucyI6Int9Iiwic2NvcGUiOlsiQXV0aGVudGljYXRpb24iLCJBdXRob3JpemF0aW9uIiwiSHIiLCJMTVMiLCJMb2NhbGl6YXRpb24iLCJMb2ciLCJOYXZpZ2F0aW9uIiwiTm90aWZpY2F0aW9uIiwiVGVzdCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwYXNzd29yZCJdfQ.q_n5NeuvTvDZHd8jdpKX9pgru3zbYHbXUFAHTkCEpeSbAJ3bA4y5SS5NTDUrXBn_civacL1JM0prsugte4MGPxiSPXRZgLjf_QbFtdhOcuHHgeVYaq9aUHxBXEjBbi-ixEy0BpFwIAnwzdpyqE6o2UmkW8qwyNce0tfqOZX0ZA9wanEGT5LqfR1mW77RiGuHN-eKrm3CGK-y7sd3VTFAYmSJaZ55XauvGprD_2xHzZRHfU7UT7qOBbf5KGZ4Gqt2AOugUVFj-XFdr72o1zVvgJc1LRQuGBGCgXo9GYUOkeW4aBsga17SCHsqz_d8qfLoJ7cOG2jgBC2iTjSZpmrFXpd1S89DVo0RnjCmzncPd-oZffL42aohvu0wbIlHNRGvpzmaH3GT0yUZjDfSv8Dsqp8IjaUc90PyKAVRcgYfVH5YhQFOjtbNuky35KzPfBkZJE8exVDYWjbkDwfl36EBbHDBdD4c1gkrEP9Blz6_5MYEuNOwjxSjCP0wns5zwUigKJvDZoJyhZ5sIJ5u0JYqUGDrl-G9Cr0cPIhEM58WlKeK1TkKvwF7Q9pJvKtNVXg3-z-2F1vBTTshpDT1oVZIfc7_9Qj-wgjlQsqEnII_N0uYwYQGEuA7-znyyvkpr_L-UAbJDKmxFGjFRoBlBqUnXbKqjIlk7OdXZzadIkGjWmQ",
-            "X-Authorize" => "",
+            "Authorization" => "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjAwNTU2QzAzRkZBQTE5NTJCQUVGRTgxQzI1QjY0RDJFNDAxOUI3OTYiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJBRlZzQV8tcUdWSzY3LWdjSmJaTkxrQVp0NVkifQ.eyJuYmYiOjE2NDIwMDE1MzcsImV4cCI6MTY0MjA5MTUzNywiaXNzIjoiaHR0cDovL2xtcy52bnUuZWR1LnZuIiwiYXVkIjpbIkF1dGhlbnRpY2F0aW9uIiwiQXV0aG9yaXphdGlvbiIsIkhyIiwiTE1TIiwiTG9jYWxpemF0aW9uIiwiTG9nIiwiTmF2aWdhdGlvbiIsIk5vdGlmaWNhdGlvbiIsIlRlc3QiXSwiY2xpZW50X2lkIjoid2ViIiwic3ViIjoiRERQMDYwMTAwNCIsImF1dGhfdGltZSI6MTY0MjAwMTUzNywiaWRwIjoibG9jYWwiLCJ1c2VyaWQiOiI1ZjEzOGI0OS03ZmVhLTRiMTctYjk5OC05M2E2MjZmNDk0OGMiLCJ1c2VybmFtZSI6IkREUDA2MDEwMDQiLCJkaXNwbGF5bmFtZSI6Ik5ndXnhu4VuIENodSBLaOG6oyBIw6JuIiwiZnVsbG5hbWUiOiJOZ3V54buFbiBDaHUgS2jhuqMgSMOibiIsImVtYWlsIjoiIiwiZW1haWxzIjoiIiwiaXNzdXBlcnVzZXIiOiJmYWxzZSIsInVzZXJlbmNyeXB0IjoicUhEUUVyRnE4L0ZFQXp2b3JxWXh2QT09Iiwic2Vzc2lvbmlkIjoiYTdlYjk1NjgtMmIyOC00MTM1LWE0MGQtNzU4ZjZlMjYzYzc1IiwidXNlcnR5cGUiOiJPdGhlciIsInRpbWV6b25lQ29kZSI6IlVUQyswNzowMCIsImlkR0dNZWV0IjoiIiwiaWRNU1RlYW0iOiIiLCJpZFpvb20iOiIiLCJhdmF0YXIiOiIiLCJwZXJtaXNzaW9ucyI6Int9Iiwic2NvcGUiOlsiQXV0aGVudGljYXRpb24iLCJBdXRob3JpemF0aW9uIiwiSHIiLCJMTVMiLCJMb2NhbGl6YXRpb24iLCJMb2ciLCJOYXZpZ2F0aW9uIiwiTm90aWZpY2F0aW9uIiwiVGVzdCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwYXNzd29yZCJdfQ.iU4rEe4FQ2kbLjJJwbl-_0f83y1jys-F3pZw9XRL5dUfgq-f23Ne5pFFGJDx4fFAYUcXKrqVFEEOwU9nC1oHUER2jSqbcPBERKFJUTRx_hKUzcAf31_6RLbjbEyCuNMQWqJULTEGjhoJ2NFkBJcy7zK_akhoqpT8RMWvQA_F1wRZ8iVBzbq47nDf9cvaZ0g8P8ex-wd8bU36_G0rROBj9lT8PlGlpggwB1CchuOT9vu06SMy1yf_DcQrcLFSbkJTDGYLFprgnTHaksK4QUVx0gkWCh-85bPsEBDNc6oQQFudsqZhT5If71Nwp59l06vnGG9AqYYBudNVKkQMV6ZUfiIxNYW84QvM2va2Wz2IQYgewBQJaEP9X92llS_ATQBL92od1QYdIiA88orx28dv4hIPAIEvYtUotXKLemYKWQDv5fh8RMCIwz_klHqhzMgerV9mPvdnFdm0YjArqysZBhyFLDhcVPcBllNzsKycaHOJHB3vNPkT6P8HbGgbSTglIeIqoPoNOq3JkY2d5Acu1x8kOVv5Pr71PiQ7UqIOBHfrYuAre1-YbuAMiGbfbGoxpunlDuRt_N01ecbdIwskz-I_uOYsUBMVMDe67a-wSZxievenbFLx4CvRv0dMQ7svbwsBiVNygQqNzUXT4ZZdW9xRk_mZoKjrb4Xclncw30A"
+             ,   "X-Authorize" => "",
             "Host" => "lms.vnu.edu.vn",
         ];
 
         $listQuestion = [];
-        foreach ($classNames as $key => $value) {
-            $class_questions = [];
-            $response = Http::withHeaders($headers)->get('https://lms.vnu.edu.vn/dhqg.test.api/api/v1/TestClassUserTest/GetPreview', [
-                'classContentId' => $value['classContentId'],
-                'testFormId' => $value['testFormId'],
-                'classUserId' => 'ff5bec44-ecc0-4e96-ba7f-54cd534ef96c'
-            ]);
+        for($i=0 ; $i < 10 ;$i++) {
+            foreach ($classNames as $key => $value) {
+                $class_questions = [];
+                $response = Http::withHeaders($headers)->get('https://lms.vnu.edu.vn/dhqg.test.api/api/v1/TestClassUserTest/GetPreview', [
+                    'classContentId' => $value['classContentId'],
+                    'testFormId' => $value['testFormId'],
+                    'classUserId' => 'ff5bec44-ecc0-4e96-ba7f-54cd534ef96c'
+                ]);
 //            return $response;
-            foreach ($response["data"]["dataTest"] as $item) {
-                $class_questions[] = [
-                    "content" => $item["question"]["content"],
-                    "testAnswer" => $item["question"]["testAnswer"],
+                foreach ($response["data"]["dataTest"] as $item) {
+                    $class_questions[] = [
+                        "content" => $item["question"]["content"],
+                        "testAnswer" => $item["question"]["testAnswer"],
+                    ];
+                }
+
+                $listQuestion[] = [
+                    "class_name" => $key,
+                    "questions" => $class_questions
                 ];
             }
-
-            $listQuestion[] = [
-                "class_name" => $key,
-                "questions" => $class_questions
-            ];
         }
+
 
 
         return view("question", [
