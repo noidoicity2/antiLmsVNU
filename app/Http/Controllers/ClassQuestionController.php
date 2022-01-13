@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Http;
 class ClassQuestionController extends Controller
 {
     //
+    // lấy câu hỏi theo class
     public function getQuestion()
     {
         $classNames = [
@@ -118,10 +119,10 @@ class ClassQuestionController extends Controller
 //                'testFormId' => '9a6c342a-edff-42bc-9713-2506a0450d8b',
 //                'classContentId' => '7efc6391-a9b9-40af-a00a-a8f3ebe10fe5'
 //            ],
-            'bai thi2' => [
-                'testFormId' => 'cef48e08-4d16-4880-9aee-e89aea8e3263',
-                'classContentId' => 'd345bf43-bdec-4c11-87ac-944affa62f89'
-            ],
+//            'bai thi2' => [
+//                'testFormId' => 'cef48e08-4d16-4880-9aee-e89aea8e3263',
+//                'classContentId' => 'd345bf43-bdec-4c11-87ac-944affa62f89'
+//            ],
 //            'd12-nhanthuc' => [
 //                'testFormId' => 'f8f23127-011f-4fd5-9e7e-195a5d3f50d1',
 //                'classContentId' => '1955dc46-aef9-4d4f-921f-8ba51746121e'
@@ -130,19 +131,29 @@ class ClassQuestionController extends Controller
 //                'testFormId' => 'ad7b3363-f4d5-4c05-be6c-07e885d49b94',
 //                'classContentId' => '2b57fccb-95c0-49b3-bb47-8d1a4631fe26'
 //            ],
+                        'b1-nhanthuc' => [
+                'testFormId' => '29270241-5794-4869-ba61-a1285ed12e89',
+                'classContentId' => '331a8f54-2eed-4eb1-8e61-1011cc1f3f38'
+            ],
+                        'b1-cuoibai' => [
+                'testFormId' => '29270241-5794-4869-ba61-a1285ed12e89',
+                'classContentId' => '331a8f54-2eed-4eb1-8e61-1011cc1f3f38'
+            ],
 
 
 
         ];
 //        $client = new  Client();
+
+        $token =  "eyJhbGciOiJSUzI1NiIsImtpZCI6IjAwNTU2QzAzRkZBQTE5NTJCQUVGRTgxQzI1QjY0RDJFNDAxOUI3OTYiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJBRlZzQV8tcUdWSzY3LWdjSmJaTkxrQVp0NVkifQ.eyJuYmYiOjE2NDIwMDYwMDIsImV4cCI6MTY0MjA5NjAwMiwiaXNzIjoiaHR0cDovL2xtcy52bnUuZWR1LnZuIiwiYXVkIjpbIkF1dGhlbnRpY2F0aW9uIiwiQXV0aG9yaXphdGlvbiIsIkhyIiwiTE1TIiwiTG9jYWxpemF0aW9uIiwiTG9nIiwiTmF2aWdhdGlvbiIsIk5vdGlmaWNhdGlvbiIsIlRlc3QiXSwiY2xpZW50X2lkIjoid2ViIiwic3ViIjoiRERQMDYwMzExMiIsImF1dGhfdGltZSI6MTY0MjAwNjAwMiwiaWRwIjoibG9jYWwiLCJ1c2VyaWQiOiI3MWQ3ZjdlMC00MGU5LTQ4M2UtOWVhNS1kMTU1MmUwNDQ5MDIiLCJ1c2VybmFtZSI6IkREUDA2MDMxMTIiLCJkaXNwbGF5bmFtZSI6Iktow7pjIFRow6BuaCBM4buZYyIsImZ1bGxuYW1lIjoiS2jDumMgVGjDoG5oIEzhu5ljIiwiZW1haWwiOiIiLCJlbWFpbHMiOiIiLCJpc3N1cGVydXNlciI6ImZhbHNlIiwidXNlcmVuY3J5cHQiOiJ0bVRXSnV3RkhOZm0vcnhkd0dHajZnPT0iLCJzZXNzaW9uaWQiOiI1ODkyNzY4ZC0zODllLTRhZmUtOGU2YS1hMDEzZmFmNmNlZWIiLCJ1c2VydHlwZSI6Ik90aGVyIiwidGltZXpvbmVDb2RlIjoiVVRDKzA3OjAwIiwiaWRHR01lZXQiOiIiLCJpZE1TVGVhbSI6IiIsImlkWm9vbSI6IiIsImF2YXRhciI6IiIsInBlcm1pc3Npb25zIjoie30iLCJzY29wZSI6WyJBdXRoZW50aWNhdGlvbiIsIkF1dGhvcml6YXRpb24iLCJIciIsIkxNUyIsIkxvY2FsaXphdGlvbiIsIkxvZyIsIk5hdmlnYXRpb24iLCJOb3RpZmljYXRpb24iLCJUZXN0Iiwib2ZmbGluZV9hY2Nlc3MiXSwiYW1yIjpbInBhc3N3b3JkIl19.HxpsIbUIE_2RhZnm3LYKSfWSVq3TiGrua-gc7gTBbexn0qRNx50NbBLO-EJRJ_ZXt2-I6EDLxQAFBeeYW6PZGglvfgOnVoWVuHD3yQphMzxO4P-y9GLXGPut7PqTTDiQe3Rp8p8TXHpyoZ4fYoMfvDiiggsJ477bMfDqQv2CmJLeBTBQc-WJR0esw_VyzYcQKW8AkeGo-XLmeUC4XPlwDWGleEcK-kBeYUxCqZKGsp1ZpNnve8nOCxeO5th9pBDK9ESLcfhm8qijaZqRAssC4bcorDqIlJanRsdAzbp_GCAxarMOtyDnWUITmGTxDfC6zb4CXU74zuOnP0qa6-kkw0flobIPQ4cKwhTwHBgQ85w_dqBkENcpjFDvz5bk2VbyZ5kYSMRWqXM3ip7LNQY04ThwbMAyUS2Fqd_g4CV80pbJE7XxnOiiC5G9OYGbBVa37v47PWQsMqpjiz9ZKKiQdHMX6VJy90rCVd9JErCQ9Q6xnmN69576AL7l32xGNp3EuRt-iDo6vmiaa-n-hoTCiaD5BVCQoV_FKGedEgGbJ6UxL1voSxMk5Y8CL3ir6HwjW2bFExoREVtIq6Te4Q8TKozimS8hC_PKKUnykkuv9KfdRR6O3IF4cRfZjV32hrgY12lSGX5_3Go7YmOXuExV0w6RUZWY4z59h0KokTKrHyY";
         $headers = [
-            "Authorization" => "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjAwNTU2QzAzRkZBQTE5NTJCQUVGRTgxQzI1QjY0RDJFNDAxOUI3OTYiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJBRlZzQV8tcUdWSzY3LWdjSmJaTkxrQVp0NVkifQ.eyJuYmYiOjE2NDIwMDE1MzcsImV4cCI6MTY0MjA5MTUzNywiaXNzIjoiaHR0cDovL2xtcy52bnUuZWR1LnZuIiwiYXVkIjpbIkF1dGhlbnRpY2F0aW9uIiwiQXV0aG9yaXphdGlvbiIsIkhyIiwiTE1TIiwiTG9jYWxpemF0aW9uIiwiTG9nIiwiTmF2aWdhdGlvbiIsIk5vdGlmaWNhdGlvbiIsIlRlc3QiXSwiY2xpZW50X2lkIjoid2ViIiwic3ViIjoiRERQMDYwMTAwNCIsImF1dGhfdGltZSI6MTY0MjAwMTUzNywiaWRwIjoibG9jYWwiLCJ1c2VyaWQiOiI1ZjEzOGI0OS03ZmVhLTRiMTctYjk5OC05M2E2MjZmNDk0OGMiLCJ1c2VybmFtZSI6IkREUDA2MDEwMDQiLCJkaXNwbGF5bmFtZSI6Ik5ndXnhu4VuIENodSBLaOG6oyBIw6JuIiwiZnVsbG5hbWUiOiJOZ3V54buFbiBDaHUgS2jhuqMgSMOibiIsImVtYWlsIjoiIiwiZW1haWxzIjoiIiwiaXNzdXBlcnVzZXIiOiJmYWxzZSIsInVzZXJlbmNyeXB0IjoicUhEUUVyRnE4L0ZFQXp2b3JxWXh2QT09Iiwic2Vzc2lvbmlkIjoiYTdlYjk1NjgtMmIyOC00MTM1LWE0MGQtNzU4ZjZlMjYzYzc1IiwidXNlcnR5cGUiOiJPdGhlciIsInRpbWV6b25lQ29kZSI6IlVUQyswNzowMCIsImlkR0dNZWV0IjoiIiwiaWRNU1RlYW0iOiIiLCJpZFpvb20iOiIiLCJhdmF0YXIiOiIiLCJwZXJtaXNzaW9ucyI6Int9Iiwic2NvcGUiOlsiQXV0aGVudGljYXRpb24iLCJBdXRob3JpemF0aW9uIiwiSHIiLCJMTVMiLCJMb2NhbGl6YXRpb24iLCJMb2ciLCJOYXZpZ2F0aW9uIiwiTm90aWZpY2F0aW9uIiwiVGVzdCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwYXNzd29yZCJdfQ.iU4rEe4FQ2kbLjJJwbl-_0f83y1jys-F3pZw9XRL5dUfgq-f23Ne5pFFGJDx4fFAYUcXKrqVFEEOwU9nC1oHUER2jSqbcPBERKFJUTRx_hKUzcAf31_6RLbjbEyCuNMQWqJULTEGjhoJ2NFkBJcy7zK_akhoqpT8RMWvQA_F1wRZ8iVBzbq47nDf9cvaZ0g8P8ex-wd8bU36_G0rROBj9lT8PlGlpggwB1CchuOT9vu06SMy1yf_DcQrcLFSbkJTDGYLFprgnTHaksK4QUVx0gkWCh-85bPsEBDNc6oQQFudsqZhT5If71Nwp59l06vnGG9AqYYBudNVKkQMV6ZUfiIxNYW84QvM2va2Wz2IQYgewBQJaEP9X92llS_ATQBL92od1QYdIiA88orx28dv4hIPAIEvYtUotXKLemYKWQDv5fh8RMCIwz_klHqhzMgerV9mPvdnFdm0YjArqysZBhyFLDhcVPcBllNzsKycaHOJHB3vNPkT6P8HbGgbSTglIeIqoPoNOq3JkY2d5Acu1x8kOVv5Pr71PiQ7UqIOBHfrYuAre1-YbuAMiGbfbGoxpunlDuRt_N01ecbdIwskz-I_uOYsUBMVMDe67a-wSZxievenbFLx4CvRv0dMQ7svbwsBiVNygQqNzUXT4ZZdW9xRk_mZoKjrb4Xclncw30A"
-             ,   "X-Authorize" => "",
+            "Authorization" => "Bearer ".$token,
+            "X-Authorize" => "",
             "Host" => "lms.vnu.edu.vn",
         ];
 
         $listQuestion = [];
-        for($i=0 ; $i < 10 ;$i++) {
+
             foreach ($classNames as $key => $value) {
                 $class_questions = [];
                 $response = Http::withHeaders($headers)->get('https://lms.vnu.edu.vn/dhqg.test.api/api/v1/TestClassUserTest/GetPreview', [
@@ -163,7 +174,7 @@ class ClassQuestionController extends Controller
                     "questions" => $class_questions
                 ];
             }
-        }
+
 
 
 

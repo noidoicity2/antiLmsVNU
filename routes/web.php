@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[\App\Http\Controllers\SingleQuestionController::class, 'getQuestion'] );
-Route::get('q' , [\App\Http\Controllers\ClassQuestionController::class , 'getQuestion']);
-Route::get('r' , [\App\Http\Controllers\ResultController::class , 'getQuestion']);
-Route::get('qid' , [\App\Http\Controllers\AnswerController::class , 'getQuestionIdByForm']);
+Route::get('/',[\App\Http\Controllers\SingleQuestionController::class, 'getQuestion'] ); //lấy toàn bộ câu hỏi ko theo class
+Route::get('q' , [\App\Http\Controllers\ClassQuestionController::class , 'getQuestion']); //lấy câu hỏi theo class
+Route::get('r' , [\App\Http\Controllers\ResultController::class , 'getQuestion']);  // lấy kết quả bài thi
+Route::get('rs' , [\App\Http\Controllers\ResultController::class , 'getTestResult']); //lây kết quả bài tập
+
+Route::get('qid' , [\App\Http\Controllers\AnswerController::class , 'getQuestionIdByForm']); // lấy toàn bộ question id và ws request
 
 

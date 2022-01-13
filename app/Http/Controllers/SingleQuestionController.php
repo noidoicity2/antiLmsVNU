@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Http;
 
 class SingleQuestionController extends Controller
 {
-    //
+    // lấy câu hỏi ko theo class
     public function getQuestion()
     {
         $classNames = [
@@ -136,33 +136,33 @@ class SingleQuestionController extends Controller
 //                'testFormId' => 'ad7b3363-f4d5-4c05-be6c-07e885d49b94',
 //                'classContentId' => '2b57fccb-95c0-49b3-bb47-8d1a4631fe26'
 //            ],
-            'bai thi2' => [
-                'testFormId' => 'cef48e08-4d16-4880-9aee-e89aea8e3263',
-                'classContentId' => 'd345bf43-bdec-4c11-87ac-944affa62f89'
-            ],
-
+//            'bai thi2' => [
+//                'testFormId' => 'cef48e08-4d16-4880-9aee-e89aea8e3263',
+//                'classContentId' => 'd345bf43-bdec-4c11-87ac-944affa62f89'
+//            ],
 
 
         ];
+        $token = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjAwNTU2QzAzRkZBQTE5NTJCQUVGRTgxQzI1QjY0RDJFNDAxOUI3OTYiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJBRlZzQV8tcUdWSzY3LWdjSmJaTkxrQVp0NVkifQ.eyJuYmYiOjE2NDIwMDUzOTEsImV4cCI6MTY0MjA5NTM5MSwiaXNzIjoiaHR0cDovL2xtcy52bnUuZWR1LnZuIiwiYXVkIjpbIkF1dGhlbnRpY2F0aW9uIiwiQXV0aG9yaXphdGlvbiIsIkhyIiwiTE1TIiwiTG9jYWxpemF0aW9uIiwiTG9nIiwiTmF2aWdhdGlvbiIsIk5vdGlmaWNhdGlvbiIsIlRlc3QiXSwiY2xpZW50X2lkIjoid2ViIiwic3ViIjoiRERQMDYwMzEyMSIsImF1dGhfdGltZSI6MTY0MjAwNTM5MSwiaWRwIjoibG9jYWwiLCJ1c2VyaWQiOiI4OWQ3OGVjMS1hMzI4LTRjMzItYTRlZi1kZmQyNmY3ZGViZDkiLCJ1c2VybmFtZSI6IkREUDA2MDMxMjEiLCJkaXNwbGF5bmFtZSI6Ik5ndXnhu4VuIEtow6FuaCBMaW5oIiwiZnVsbG5hbWUiOiJOZ3V54buFbiBLaMOhbmggTGluaCIsImVtYWlsIjoiIiwiZW1haWxzIjoiIiwiaXNzdXBlcnVzZXIiOiJmYWxzZSIsInVzZXJlbmNyeXB0IjoidG1UV0p1d0ZITmNmbDhrUnZXMEQzUT09Iiwic2Vzc2lvbmlkIjoiODI4MTM3OTEtYjJkNi00ZTM4LTkzMjktNWIzMDFhYzA3ZWM5IiwidXNlcnR5cGUiOiJPdGhlciIsInRpbWV6b25lQ29kZSI6IlVUQyswNzowMCIsImlkR0dNZWV0IjoiIiwiaWRNU1RlYW0iOiIiLCJpZFpvb20iOiIiLCJhdmF0YXIiOiIiLCJwZXJtaXNzaW9ucyI6Int9Iiwic2NvcGUiOlsiQXV0aGVudGljYXRpb24iLCJBdXRob3JpemF0aW9uIiwiSHIiLCJMTVMiLCJMb2NhbGl6YXRpb24iLCJMb2ciLCJOYXZpZ2F0aW9uIiwiTm90aWZpY2F0aW9uIiwiVGVzdCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwYXNzd29yZCJdfQ.h-LQgB5ENDUevM8Q8vWy0CZXs873u64VYYEuxrU9dPjKTtWwJ6KE_oluw0ZK0NzB0v0OL-BABgkCbNo7KPsPKLXllmtvQXImxPSeeagJSUIrvEgixBO0Dz2aVTyPM_xQuz1C72aalaWHVb3kN8cmpgaNfC7LvgmYBBwDAMmQjWZd1grjZxZenJEYJUJGyaiREmXlRFw24GaiXQ0d942v1o7c6DKtlT-QxaFN0LO8AImHp3k8jnh8Ng2azrGc5yLwlYSr8cZvN6H2SVzIoY0PjsPOR7RRgVRiLyNiJ8tNmdgrc3b4ZAZx0nUlD9IpIU4iugXOdKgqu1kJ7Gq3rEEiD2AgYDYqeot8iSZ9eQGiXIWl-sEE3vMgWrgMR7bTSr9ZYKPY-2mi2kOh-1QiQedggB0xoF6Jr3s28YihKQAiUd0d5CiU5cuxNLE8GyNyqby67qMqOhFxGww817bRkGsoWYxtDoEK8sIyLXvlZeR516B-6C6VToaGdnMJWiDSsDRrBjg8UuezDLiMLD3wqn7TBdTpTJlaXQmr3eTVinbDSs7Ds8fq8L7ZiSroxZrkXMrrRHfLeCZ5f9afd486AszmB7R1pS0TwnckVKq2rARlnp5kWV0KGWVUKmoOcFgQs6uDvLbjdh_0FQOcYay5VkFDZb-dbI1MmoMYN6zkx4khlBg";
+        $wsUrl = "wss://lms.vnu.edu.vn/dhqg.test.api/socket/hubs/test?access_token=";
         $headers = [
-            "Authorization" => "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjAwNTU2QzAzRkZBQTE5NTJCQUVGRTgxQzI1QjY0RDJFNDAxOUI3OTYiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJBRlZzQV8tcUdWSzY3LWdjSmJaTkxrQVp0NVkifQ.eyJuYmYiOjE2NDE5MTIyOTksImV4cCI6MTY0MjAwMjI5OSwiaXNzIjoiaHR0cDovL2xtcy52bnUuZWR1LnZuIiwiYXVkIjpbIkF1dGhlbnRpY2F0aW9uIiwiQXV0aG9yaXphdGlvbiIsIkhyIiwiTE1TIiwiTG9jYWxpemF0aW9uIiwiTG9nIiwiTmF2aWdhdGlvbiIsIk5vdGlmaWNhdGlvbiIsIlRlc3QiXSwiY2xpZW50X2lkIjoid2ViIiwic3ViIjoiRERQMDYwMTAwNCIsImF1dGhfdGltZSI6MTY0MTkxMjI5OSwiaWRwIjoibG9jYWwiLCJ1c2VyaWQiOiI1ZjEzOGI0OS03ZmVhLTRiMTctYjk5OC05M2E2MjZmNDk0OGMiLCJ1c2VybmFtZSI6IkREUDA2MDEwMDQiLCJkaXNwbGF5bmFtZSI6Ik5ndXnhu4VuIENodSBLaOG6oyBIw6JuIiwiZnVsbG5hbWUiOiJOZ3V54buFbiBDaHUgS2jhuqMgSMOibiIsImVtYWlsIjoiIiwiZW1haWxzIjoiIiwiaXNzdXBlcnVzZXIiOiJmYWxzZSIsInVzZXJlbmNyeXB0IjoicUhEUUVyRnE4L0ZFQXp2b3JxWXh2QT09Iiwic2Vzc2lvbmlkIjoiMGQ1YTIzMGYtODMwMi00YjQ1LTk3ODEtNTg1ODBlNGNkMDJiIiwidXNlcnR5cGUiOiJPdGhlciIsInRpbWV6b25lQ29kZSI6IlVUQyswNzowMCIsImlkR0dNZWV0IjoiIiwiaWRNU1RlYW0iOiIiLCJpZFpvb20iOiIiLCJhdmF0YXIiOiIiLCJwZXJtaXNzaW9ucyI6Int9Iiwic2NvcGUiOlsiQXV0aGVudGljYXRpb24iLCJBdXRob3JpemF0aW9uIiwiSHIiLCJMTVMiLCJMb2NhbGl6YXRpb24iLCJMb2ciLCJOYXZpZ2F0aW9uIiwiTm90aWZpY2F0aW9uIiwiVGVzdCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwYXNzd29yZCJdfQ.q_n5NeuvTvDZHd8jdpKX9pgru3zbYHbXUFAHTkCEpeSbAJ3bA4y5SS5NTDUrXBn_civacL1JM0prsugte4MGPxiSPXRZgLjf_QbFtdhOcuHHgeVYaq9aUHxBXEjBbi-ixEy0BpFwIAnwzdpyqE6o2UmkW8qwyNce0tfqOZX0ZA9wanEGT5LqfR1mW77RiGuHN-eKrm3CGK-y7sd3VTFAYmSJaZ55XauvGprD_2xHzZRHfU7UT7qOBbf5KGZ4Gqt2AOugUVFj-XFdr72o1zVvgJc1LRQuGBGCgXo9GYUOkeW4aBsga17SCHsqz_d8qfLoJ7cOG2jgBC2iTjSZpmrFXpd1S89DVo0RnjCmzncPd-oZffL42aohvu0wbIlHNRGvpzmaH3GT0yUZjDfSv8Dsqp8IjaUc90PyKAVRcgYfVH5YhQFOjtbNuky35KzPfBkZJE8exVDYWjbkDwfl36EBbHDBdD4c1gkrEP9Blz6_5MYEuNOwjxSjCP0wns5zwUigKJvDZoJyhZ5sIJ5u0JYqUGDrl-G9Cr0cPIhEM58WlKeK1TkKvwF7Q9pJvKtNVXg3-z-2F1vBTTshpDT1oVZIfc7_9Qj-wgjlQsqEnII_N0uYwYQGEuA7-znyyvkpr_L-UAbJDKmxFGjFRoBlBqUnXbKqjIlk7OdXZzadIkGjWmQ",
+            "Authorization" => "Bearer " . $token,
             "X-Authorize" => "",
             "Host" => "lms.vnu.edu.vn",
         ];
         $class_questions = [];
-        for($i = 0 ; $i < 30 ; $i++){
-            foreach ($classNames as $key => $value) {
-                $response = Http::withHeaders($headers)->get('https://lms.vnu.edu.vn/dhqg.test.api/api/v1/TestClassUserTest/GetPreview', [
-                    'classContentId' => $value['classContentId'],
-                    'testFormId' => $value['testFormId'],
-                    'classUserId' => 'ff5bec44-ecc0-4e96-ba7f-54cd534ef96c'
-                ]);
-                foreach ($response["data"]["dataTest"] as $item) {
 
-                    $class_questions[$item["question"]["content"]] = $item["question"]["testAnswer"];
-                }
+        foreach ($classNames as $key => $value) {
+            $response = Http::withHeaders($headers)->get('https://lms.vnu.edu.vn/dhqg.test.api/api/v1/TestClassUserTest/GetPreview', [
+                'classContentId' => $value['classContentId'],
+                'testFormId' => $value['testFormId'],
+                'classUserId' => 'ff5bec44-ecc0-4e96-ba7f-54cd534ef96c'
+            ]);
+            foreach ($response["data"]["dataTest"] as $item) {
 
+                $class_questions[$item["question"]["content"]] = $item["question"]["testAnswer"];
             }
+
         }
 
 
