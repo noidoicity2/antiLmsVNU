@@ -11,30 +11,40 @@ class ResultController extends Controller
     public function getQuestion()
     {
         $classNames = [
-            'A2-aa' => [
-                'testFormId' => '682ad2e1-af90-4b02-aee3-eebcb75eb5a2',
-                'classContentId' => 'd345bf43-bdec-4c11-87ac-944affa62f89'
+
+            'C6-NhanThuc' => [
+                'testFormId' => 'ae42a2df-321f-447d-947c-9ccd6675da96',
+                'classContentId' => 'dc932376-e4a2-4d4f-8b67-69aca8459308'
             ],
-            'A2-nhanthuc' => [
-                'testFormId' => 'd9123d57-ca3d-4506-bffa-a0cf754d89de',
-                'classContentId' => 'b8821f01-782b-493d-abb1-fb0fe832a5ad'
+            'C6-Venha' => [
+                'testFormId' => 'a9721109-fc48-4c95-9dda-c64592260343',
+                'classContentId' => 'dc932376-e4a2-4d4f-8b67-69aca8459308'
             ],
-//
+
+//            'B2-nhanthuc' => [
+//                'testFormId' => '2163241c-f2cb-4f93-9b7d-8dca265a1a88',
+//                'classContentId' => 'd345bf43-bdec-4c11-87ac-944affa62f89'
+//            ],
+//            'B2-cuoibai' => [
+//                'testFormId' => '724e7408-2ee3-446f-a72d-b9fae8f9ad21',
+//                'classContentId' => 'b8821f01-782b-493d-abb1-fb0fe832a5ad'
+//            ],
 ////
-            'A2-cuoibai' => [
-                'testFormId' => '81e25744-b69e-4261-bb85-8452beec8f29',
-                'classContentId' => '4b65cecc-243f-43a8-b6ff-42205f58cd00'
-            ],
-//
 //////
-//            'A3-nhanthuc' => [
-//                'testFormId' => 'f3470681-7ecd-45d6-9020-711b04488e8b',
+//            'B3' => [
+//                'testFormId' => '23d584cc-c8dd-4e69-bcc2-ddcaaf87074e',
+//                'classContentId' => '4b65cecc-243f-43a8-b6ff-42205f58cd00'
+//            ],
+
+//////
+//            'B4' => [
+//                'testFormId' => '1ad51f76-a9a6-4a7d-a2a0-068416d20741',
 //                'classContentId' => '69b8db54-56a9-4e0f-9663-3540c7d20546'
 //            ],
 //////
 //////
-//            'A3-cuoibai' => [
-//                'testFormId' => 'bb8c3f69-7c62-46d0-8b24-a02f268fb3ab',
+//            'B5' => [
+//                'testFormId' => 'eea77ae4-65f0-4733-a579-8908f5043138',
 //                'classContentId' => 'dc932376-e4a2-4d4f-8b67-69aca8459308'
 //            ],
 //////
@@ -125,7 +135,25 @@ class ResultController extends Controller
 
 
         ];
-        $token =  "eyJhbGciOiJSUzI1NiIsImtpZCI6IjAwNTU2QzAzRkZBQTE5NTJCQUVGRTgxQzI1QjY0RDJFNDAxOUI3OTYiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJBRlZzQV8tcUdWSzY3LWdjSmJaTkxrQVp0NVkifQ.eyJuYmYiOjE2NDIwMDUzOTEsImV4cCI6MTY0MjA5NTM5MSwiaXNzIjoiaHR0cDovL2xtcy52bnUuZWR1LnZuIiwiYXVkIjpbIkF1dGhlbnRpY2F0aW9uIiwiQXV0aG9yaXphdGlvbiIsIkhyIiwiTE1TIiwiTG9jYWxpemF0aW9uIiwiTG9nIiwiTmF2aWdhdGlvbiIsIk5vdGlmaWNhdGlvbiIsIlRlc3QiXSwiY2xpZW50X2lkIjoid2ViIiwic3ViIjoiRERQMDYwMzEyMSIsImF1dGhfdGltZSI6MTY0MjAwNTM5MSwiaWRwIjoibG9jYWwiLCJ1c2VyaWQiOiI4OWQ3OGVjMS1hMzI4LTRjMzItYTRlZi1kZmQyNmY3ZGViZDkiLCJ1c2VybmFtZSI6IkREUDA2MDMxMjEiLCJkaXNwbGF5bmFtZSI6Ik5ndXnhu4VuIEtow6FuaCBMaW5oIiwiZnVsbG5hbWUiOiJOZ3V54buFbiBLaMOhbmggTGluaCIsImVtYWlsIjoiIiwiZW1haWxzIjoiIiwiaXNzdXBlcnVzZXIiOiJmYWxzZSIsInVzZXJlbmNyeXB0IjoidG1UV0p1d0ZITmNmbDhrUnZXMEQzUT09Iiwic2Vzc2lvbmlkIjoiODI4MTM3OTEtYjJkNi00ZTM4LTkzMjktNWIzMDFhYzA3ZWM5IiwidXNlcnR5cGUiOiJPdGhlciIsInRpbWV6b25lQ29kZSI6IlVUQyswNzowMCIsImlkR0dNZWV0IjoiIiwiaWRNU1RlYW0iOiIiLCJpZFpvb20iOiIiLCJhdmF0YXIiOiIiLCJwZXJtaXNzaW9ucyI6Int9Iiwic2NvcGUiOlsiQXV0aGVudGljYXRpb24iLCJBdXRob3JpemF0aW9uIiwiSHIiLCJMTVMiLCJMb2NhbGl6YXRpb24iLCJMb2ciLCJOYXZpZ2F0aW9uIiwiTm90aWZpY2F0aW9uIiwiVGVzdCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwYXNzd29yZCJdfQ.h-LQgB5ENDUevM8Q8vWy0CZXs873u64VYYEuxrU9dPjKTtWwJ6KE_oluw0ZK0NzB0v0OL-BABgkCbNo7KPsPKLXllmtvQXImxPSeeagJSUIrvEgixBO0Dz2aVTyPM_xQuz1C72aalaWHVb3kN8cmpgaNfC7LvgmYBBwDAMmQjWZd1grjZxZenJEYJUJGyaiREmXlRFw24GaiXQ0d942v1o7c6DKtlT-QxaFN0LO8AImHp3k8jnh8Ng2azrGc5yLwlYSr8cZvN6H2SVzIoY0PjsPOR7RRgVRiLyNiJ8tNmdgrc3b4ZAZx0nUlD9IpIU4iugXOdKgqu1kJ7Gq3rEEiD2AgYDYqeot8iSZ9eQGiXIWl-sEE3vMgWrgMR7bTSr9ZYKPY-2mi2kOh-1QiQedggB0xoF6Jr3s28YihKQAiUd0d5CiU5cuxNLE8GyNyqby67qMqOhFxGww817bRkGsoWYxtDoEK8sIyLXvlZeR516B-6C6VToaGdnMJWiDSsDRrBjg8UuezDLiMLD3wqn7TBdTpTJlaXQmr3eTVinbDSs7Ds8fq8L7ZiSroxZrkXMrrRHfLeCZ5f9afd486AszmB7R1pS0TwnckVKq2rARlnp5kWV0KGWVUKmoOcFgQs6uDvLbjdh_0FQOcYay5VkFDZb-dbI1MmoMYN6zkx4khlBg";
+        $userLogin = [
+            "username" =>"DDP0603121" ,
+            "password" =>"qpan020304"
+        ];
+
+        $loginUrl = "https://lms.vnu.edu.vn/dhqg.authentication.api/connect/token";
+        $loginResponse = Http::asForm()->post($loginUrl, [
+            "grant_type"=> "password",
+            "client_id" => "web",
+            "scope" =>"",
+            "username"=> $userLogin["username"],
+            "password"=>$userLogin["password"]
+
+        ]);
+
+        $token =  $loginResponse["access_token"];
+
+        //$token =  "eyJhbGciOiJSUzI1NiIsImtpZCI6IjAwNTU2QzAzRkZBQTE5NTJCQUVGRTgxQzI1QjY0RDJFNDAxOUI3OTYiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJBRlZzQV8tcUdWSzY3LWdjSmJaTkxrQVp0NVkifQ.eyJuYmYiOjE2NDIwMDUzOTEsImV4cCI6MTY0MjA5NTM5MSwiaXNzIjoiaHR0cDovL2xtcy52bnUuZWR1LnZuIiwiYXVkIjpbIkF1dGhlbnRpY2F0aW9uIiwiQXV0aG9yaXphdGlvbiIsIkhyIiwiTE1TIiwiTG9jYWxpemF0aW9uIiwiTG9nIiwiTmF2aWdhdGlvbiIsIk5vdGlmaWNhdGlvbiIsIlRlc3QiXSwiY2xpZW50X2lkIjoid2ViIiwic3ViIjoiRERQMDYwMzEyMSIsImF1dGhfdGltZSI6MTY0MjAwNTM5MSwiaWRwIjoibG9jYWwiLCJ1c2VyaWQiOiI4OWQ3OGVjMS1hMzI4LTRjMzItYTRlZi1kZmQyNmY3ZGViZDkiLCJ1c2VybmFtZSI6IkREUDA2MDMxMjEiLCJkaXNwbGF5bmFtZSI6Ik5ndXnhu4VuIEtow6FuaCBMaW5oIiwiZnVsbG5hbWUiOiJOZ3V54buFbiBLaMOhbmggTGluaCIsImVtYWlsIjoiIiwiZW1haWxzIjoiIiwiaXNzdXBlcnVzZXIiOiJmYWxzZSIsInVzZXJlbmNyeXB0IjoidG1UV0p1d0ZITmNmbDhrUnZXMEQzUT09Iiwic2Vzc2lvbmlkIjoiODI4MTM3OTEtYjJkNi00ZTM4LTkzMjktNWIzMDFhYzA3ZWM5IiwidXNlcnR5cGUiOiJPdGhlciIsInRpbWV6b25lQ29kZSI6IlVUQyswNzowMCIsImlkR0dNZWV0IjoiIiwiaWRNU1RlYW0iOiIiLCJpZFpvb20iOiIiLCJhdmF0YXIiOiIiLCJwZXJtaXNzaW9ucyI6Int9Iiwic2NvcGUiOlsiQXV0aGVudGljYXRpb24iLCJBdXRob3JpemF0aW9uIiwiSHIiLCJMTVMiLCJMb2NhbGl6YXRpb24iLCJMb2ciLCJOYXZpZ2F0aW9uIiwiTm90aWZpY2F0aW9uIiwiVGVzdCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwYXNzd29yZCJdfQ.h-LQgB5ENDUevM8Q8vWy0CZXs873u64VYYEuxrU9dPjKTtWwJ6KE_oluw0ZK0NzB0v0OL-BABgkCbNo7KPsPKLXllmtvQXImxPSeeagJSUIrvEgixBO0Dz2aVTyPM_xQuz1C72aalaWHVb3kN8cmpgaNfC7LvgmYBBwDAMmQjWZd1grjZxZenJEYJUJGyaiREmXlRFw24GaiXQ0d942v1o7c6DKtlT-QxaFN0LO8AImHp3k8jnh8Ng2azrGc5yLwlYSr8cZvN6H2SVzIoY0PjsPOR7RRgVRiLyNiJ8tNmdgrc3b4ZAZx0nUlD9IpIU4iugXOdKgqu1kJ7Gq3rEEiD2AgYDYqeot8iSZ9eQGiXIWl-sEE3vMgWrgMR7bTSr9ZYKPY-2mi2kOh-1QiQedggB0xoF6Jr3s28YihKQAiUd0d5CiU5cuxNLE8GyNyqby67qMqOhFxGww817bRkGsoWYxtDoEK8sIyLXvlZeR516B-6C6VToaGdnMJWiDSsDRrBjg8UuezDLiMLD3wqn7TBdTpTJlaXQmr3eTVinbDSs7Ds8fq8L7ZiSroxZrkXMrrRHfLeCZ5f9afd486AszmB7R1pS0TwnckVKq2rARlnp5kWV0KGWVUKmoOcFgQs6uDvLbjdh_0FQOcYay5VkFDZb-dbI1MmoMYN6zkx4khlBg";
+        //$token ="eyJhbGciOiJSUzI1NiIsImtpZCI6IjAwNTU2QzAzRkZBQTE5NTJCQUVGRTgxQzI1QjY0RDJFNDAxOUI3OTYiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJBRlZzQV8tcUdWSzY3LWdjSmJaTkxrQVp0NVkifQ.eyJuYmYiOjE2NDIwODI3OTAsImV4cCI6MTY0MjE3Mjc5MCwiaXNzIjoiaHR0cDovL2xtcy52bnUuZWR1LnZuIiwiYXVkIjpbIkF1dGhlbnRpY2F0aW9uIiwiQXV0aG9yaXphdGlvbiIsIkhyIiwiTE1TIiwiTG9jYWxpemF0aW9uIiwiTG9nIiwiTmF2aWdhdGlvbiIsIk5vdGlmaWNhdGlvbiIsIlRlc3QiXSwiY2xpZW50X2lkIjoid2ViIiwic3ViIjoiRERQMDYwMzExMiIsImF1dGhfdGltZSI6MTY0MjA4Mjc5MCwiaWRwIjoibG9jYWwiLCJ1c2VyaWQiOiI3MWQ3ZjdlMC00MGU5LTQ4M2UtOWVhNS1kMTU1MmUwNDQ5MDIiLCJ1c2VybmFtZSI6IkREUDA2MDMxMTIiLCJkaXNwbGF5bmFtZSI6Iktow7pjIFRow6BuaCBM4buZYyIsImZ1bGxuYW1lIjoiS2jDumMgVGjDoG5oIEzhu5ljIiwiZW1haWwiOiIiLCJlbWFpbHMiOiIiLCJpc3N1cGVydXNlciI6ImZhbHNlIiwidXNlcmVuY3J5cHQiOiJ0bVRXSnV3RkhOZm0vcnhkd0dHajZnPT0iLCJzZXNzaW9uaWQiOiI1ZTE0ZmZkZi1kOGEwLTRjNDAtOGM4My01YzNlN2QxNzAyZWEiLCJ1c2VydHlwZSI6Ik90aGVyIiwidGltZXpvbmVDb2RlIjoiVVRDKzA3OjAwIiwiaWRHR01lZXQiOiIiLCJpZE1TVGVhbSI6IiIsImlkWm9vbSI6IiIsImF2YXRhciI6IiIsInBlcm1pc3Npb25zIjoie30iLCJzY29wZSI6WyJBdXRoZW50aWNhdGlvbiIsIkF1dGhvcml6YXRpb24iLCJIciIsIkxNUyIsIkxvY2FsaXphdGlvbiIsIkxvZyIsIk5hdmlnYXRpb24iLCJOb3RpZmljYXRpb24iLCJUZXN0Iiwib2ZmbGluZV9hY2Nlc3MiXSwiYW1yIjpbInBhc3N3b3JkIl19.ql5yeQzgtYkL7wcW25ImfUZ1OceQVL5rAAFj6u34RPWXeCxtZD_KmkTfSTxiBAzMcu7AkJ_a09ZHoOrquQwcuQLArWP9KsRZ21eUEHHKwTMKHtHgBMdXT2P_oqrOWIEkZKydL-d7dkYyCd8ypCOg6VnHLGrOI2V4DGzIWaYg5ONBAUi2oWF_F17Bx67W3kq4rPJvFjNvRyaJdc19hVgX-l6fk0BzstfU0mok9VL8xaQdhXiN3IKWq3oF58YQ3D44n_ZMrphaLIkzhNgfoI73yXBqGPikktIKbZxNX82ZNwg0GS6IPDzBS0pzRmaW_eij7XknKF9vAOmjtjtOjr-cDsSYmNQItrKp6OkwmEvUcco8Bhnp2oeP7nzbPGNUByWcH467QE6vmD2Qfb3Hnmkiw_3fAnI9uOxkXxmPFHMzHLl1rmNZ9NRI-7tzQ-GWc-pHGrZ2ldsSY-mkctjxSYRHCbJ8xpnwPpKYuYIozrYpy1VQrNH2KIFTHpTHUWs1T6Qpwbp_oGchV-BO3sSGNB29s0oCGvg339JIFz5rg5hsO-ArduX__A_JJRM6eYNbijTxRBM3PFqkV5oU32yxdOiozM6X9cAGZMJzVGHI9BB5_XL7_ZLZvlOKrCiSafQtnLBFnEbTp1hwBOd16_mce-sw6-_bNFWxamaknsDltbdGpaA";
         $wsUrl = "wss://lms.vnu.edu.vn/dhqg.test.api/socket/hubs/test?access_token=";
         $headers = [
             "Authorization" => "Bearer ".$token,
@@ -159,16 +187,37 @@ class ResultController extends Controller
 
     }
     /* lấy đáp án bài tập thường */
-    public function getTestResult()
+    public function getQuestionResultByTestId($testId = null)
     {
         $classNames = [
-            'A2-aa' => [
-                'testFormId' => '060fc476-92de-432a-afee-44fcf78c63e9',
-                'classContentId' => 'd345bf43-bdec-4c11-87ac-944affa62f89'
+
+            'B5' => [
+                'testFormId' => $testId,
+                'classContentId' => 'dc932376-e4a2-4d4f-8b67-69aca8459308'
             ],
 
+
+
         ];
-        $token =  "eyJhbGciOiJSUzI1NiIsImtpZCI6IjAwNTU2QzAzRkZBQTE5NTJCQUVGRTgxQzI1QjY0RDJFNDAxOUI3OTYiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJBRlZzQV8tcUdWSzY3LWdjSmJaTkxrQVp0NVkifQ.eyJuYmYiOjE2NDIwMDUzOTEsImV4cCI6MTY0MjA5NTM5MSwiaXNzIjoiaHR0cDovL2xtcy52bnUuZWR1LnZuIiwiYXVkIjpbIkF1dGhlbnRpY2F0aW9uIiwiQXV0aG9yaXphdGlvbiIsIkhyIiwiTE1TIiwiTG9jYWxpemF0aW9uIiwiTG9nIiwiTmF2aWdhdGlvbiIsIk5vdGlmaWNhdGlvbiIsIlRlc3QiXSwiY2xpZW50X2lkIjoid2ViIiwic3ViIjoiRERQMDYwMzEyMSIsImF1dGhfdGltZSI6MTY0MjAwNTM5MSwiaWRwIjoibG9jYWwiLCJ1c2VyaWQiOiI4OWQ3OGVjMS1hMzI4LTRjMzItYTRlZi1kZmQyNmY3ZGViZDkiLCJ1c2VybmFtZSI6IkREUDA2MDMxMjEiLCJkaXNwbGF5bmFtZSI6Ik5ndXnhu4VuIEtow6FuaCBMaW5oIiwiZnVsbG5hbWUiOiJOZ3V54buFbiBLaMOhbmggTGluaCIsImVtYWlsIjoiIiwiZW1haWxzIjoiIiwiaXNzdXBlcnVzZXIiOiJmYWxzZSIsInVzZXJlbmNyeXB0IjoidG1UV0p1d0ZITmNmbDhrUnZXMEQzUT09Iiwic2Vzc2lvbmlkIjoiODI4MTM3OTEtYjJkNi00ZTM4LTkzMjktNWIzMDFhYzA3ZWM5IiwidXNlcnR5cGUiOiJPdGhlciIsInRpbWV6b25lQ29kZSI6IlVUQyswNzowMCIsImlkR0dNZWV0IjoiIiwiaWRNU1RlYW0iOiIiLCJpZFpvb20iOiIiLCJhdmF0YXIiOiIiLCJwZXJtaXNzaW9ucyI6Int9Iiwic2NvcGUiOlsiQXV0aGVudGljYXRpb24iLCJBdXRob3JpemF0aW9uIiwiSHIiLCJMTVMiLCJMb2NhbGl6YXRpb24iLCJMb2ciLCJOYXZpZ2F0aW9uIiwiTm90aWZpY2F0aW9uIiwiVGVzdCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwYXNzd29yZCJdfQ.h-LQgB5ENDUevM8Q8vWy0CZXs873u64VYYEuxrU9dPjKTtWwJ6KE_oluw0ZK0NzB0v0OL-BABgkCbNo7KPsPKLXllmtvQXImxPSeeagJSUIrvEgixBO0Dz2aVTyPM_xQuz1C72aalaWHVb3kN8cmpgaNfC7LvgmYBBwDAMmQjWZd1grjZxZenJEYJUJGyaiREmXlRFw24GaiXQ0d942v1o7c6DKtlT-QxaFN0LO8AImHp3k8jnh8Ng2azrGc5yLwlYSr8cZvN6H2SVzIoY0PjsPOR7RRgVRiLyNiJ8tNmdgrc3b4ZAZx0nUlD9IpIU4iugXOdKgqu1kJ7Gq3rEEiD2AgYDYqeot8iSZ9eQGiXIWl-sEE3vMgWrgMR7bTSr9ZYKPY-2mi2kOh-1QiQedggB0xoF6Jr3s28YihKQAiUd0d5CiU5cuxNLE8GyNyqby67qMqOhFxGww817bRkGsoWYxtDoEK8sIyLXvlZeR516B-6C6VToaGdnMJWiDSsDRrBjg8UuezDLiMLD3wqn7TBdTpTJlaXQmr3eTVinbDSs7Ds8fq8L7ZiSroxZrkXMrrRHfLeCZ5f9afd486AszmB7R1pS0TwnckVKq2rARlnp5kWV0KGWVUKmoOcFgQs6uDvLbjdh_0FQOcYay5VkFDZb-dbI1MmoMYN6zkx4khlBg";
+        $userLogin = [
+            "username" =>"DDP0603121" ,
+            "password" =>"qpan020304"
+        ];
+
+        $loginUrl = "https://lms.vnu.edu.vn/dhqg.authentication.api/connect/token";
+        $loginResponse = Http::asForm()->post($loginUrl, [
+            "grant_type"=> "password",
+            "client_id" => "web",
+            "scope" =>"",
+            "username"=> $userLogin["username"],
+            "password"=>$userLogin["password"]
+
+        ]);
+
+        $token =  $loginResponse["access_token"];
+
+        //$token =  "eyJhbGciOiJSUzI1NiIsImtpZCI6IjAwNTU2QzAzRkZBQTE5NTJCQUVGRTgxQzI1QjY0RDJFNDAxOUI3OTYiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJBRlZzQV8tcUdWSzY3LWdjSmJaTkxrQVp0NVkifQ.eyJuYmYiOjE2NDIwMDUzOTEsImV4cCI6MTY0MjA5NTM5MSwiaXNzIjoiaHR0cDovL2xtcy52bnUuZWR1LnZuIiwiYXVkIjpbIkF1dGhlbnRpY2F0aW9uIiwiQXV0aG9yaXphdGlvbiIsIkhyIiwiTE1TIiwiTG9jYWxpemF0aW9uIiwiTG9nIiwiTmF2aWdhdGlvbiIsIk5vdGlmaWNhdGlvbiIsIlRlc3QiXSwiY2xpZW50X2lkIjoid2ViIiwic3ViIjoiRERQMDYwMzEyMSIsImF1dGhfdGltZSI6MTY0MjAwNTM5MSwiaWRwIjoibG9jYWwiLCJ1c2VyaWQiOiI4OWQ3OGVjMS1hMzI4LTRjMzItYTRlZi1kZmQyNmY3ZGViZDkiLCJ1c2VybmFtZSI6IkREUDA2MDMxMjEiLCJkaXNwbGF5bmFtZSI6Ik5ndXnhu4VuIEtow6FuaCBMaW5oIiwiZnVsbG5hbWUiOiJOZ3V54buFbiBLaMOhbmggTGluaCIsImVtYWlsIjoiIiwiZW1haWxzIjoiIiwiaXNzdXBlcnVzZXIiOiJmYWxzZSIsInVzZXJlbmNyeXB0IjoidG1UV0p1d0ZITmNmbDhrUnZXMEQzUT09Iiwic2Vzc2lvbmlkIjoiODI4MTM3OTEtYjJkNi00ZTM4LTkzMjktNWIzMDFhYzA3ZWM5IiwidXNlcnR5cGUiOiJPdGhlciIsInRpbWV6b25lQ29kZSI6IlVUQyswNzowMCIsImlkR0dNZWV0IjoiIiwiaWRNU1RlYW0iOiIiLCJpZFpvb20iOiIiLCJhdmF0YXIiOiIiLCJwZXJtaXNzaW9ucyI6Int9Iiwic2NvcGUiOlsiQXV0aGVudGljYXRpb24iLCJBdXRob3JpemF0aW9uIiwiSHIiLCJMTVMiLCJMb2NhbGl6YXRpb24iLCJMb2ciLCJOYXZpZ2F0aW9uIiwiTm90aWZpY2F0aW9uIiwiVGVzdCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwYXNzd29yZCJdfQ.h-LQgB5ENDUevM8Q8vWy0CZXs873u64VYYEuxrU9dPjKTtWwJ6KE_oluw0ZK0NzB0v0OL-BABgkCbNo7KPsPKLXllmtvQXImxPSeeagJSUIrvEgixBO0Dz2aVTyPM_xQuz1C72aalaWHVb3kN8cmpgaNfC7LvgmYBBwDAMmQjWZd1grjZxZenJEYJUJGyaiREmXlRFw24GaiXQ0d942v1o7c6DKtlT-QxaFN0LO8AImHp3k8jnh8Ng2azrGc5yLwlYSr8cZvN6H2SVzIoY0PjsPOR7RRgVRiLyNiJ8tNmdgrc3b4ZAZx0nUlD9IpIU4iugXOdKgqu1kJ7Gq3rEEiD2AgYDYqeot8iSZ9eQGiXIWl-sEE3vMgWrgMR7bTSr9ZYKPY-2mi2kOh-1QiQedggB0xoF6Jr3s28YihKQAiUd0d5CiU5cuxNLE8GyNyqby67qMqOhFxGww817bRkGsoWYxtDoEK8sIyLXvlZeR516B-6C6VToaGdnMJWiDSsDRrBjg8UuezDLiMLD3wqn7TBdTpTJlaXQmr3eTVinbDSs7Ds8fq8L7ZiSroxZrkXMrrRHfLeCZ5f9afd486AszmB7R1pS0TwnckVKq2rARlnp5kWV0KGWVUKmoOcFgQs6uDvLbjdh_0FQOcYay5VkFDZb-dbI1MmoMYN6zkx4khlBg";
+        //$token ="eyJhbGciOiJSUzI1NiIsImtpZCI6IjAwNTU2QzAzRkZBQTE5NTJCQUVGRTgxQzI1QjY0RDJFNDAxOUI3OTYiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJBRlZzQV8tcUdWSzY3LWdjSmJaTkxrQVp0NVkifQ.eyJuYmYiOjE2NDIwODI3OTAsImV4cCI6MTY0MjE3Mjc5MCwiaXNzIjoiaHR0cDovL2xtcy52bnUuZWR1LnZuIiwiYXVkIjpbIkF1dGhlbnRpY2F0aW9uIiwiQXV0aG9yaXphdGlvbiIsIkhyIiwiTE1TIiwiTG9jYWxpemF0aW9uIiwiTG9nIiwiTmF2aWdhdGlvbiIsIk5vdGlmaWNhdGlvbiIsIlRlc3QiXSwiY2xpZW50X2lkIjoid2ViIiwic3ViIjoiRERQMDYwMzExMiIsImF1dGhfdGltZSI6MTY0MjA4Mjc5MCwiaWRwIjoibG9jYWwiLCJ1c2VyaWQiOiI3MWQ3ZjdlMC00MGU5LTQ4M2UtOWVhNS1kMTU1MmUwNDQ5MDIiLCJ1c2VybmFtZSI6IkREUDA2MDMxMTIiLCJkaXNwbGF5bmFtZSI6Iktow7pjIFRow6BuaCBM4buZYyIsImZ1bGxuYW1lIjoiS2jDumMgVGjDoG5oIEzhu5ljIiwiZW1haWwiOiIiLCJlbWFpbHMiOiIiLCJpc3N1cGVydXNlciI6ImZhbHNlIiwidXNlcmVuY3J5cHQiOiJ0bVRXSnV3RkhOZm0vcnhkd0dHajZnPT0iLCJzZXNzaW9uaWQiOiI1ZTE0ZmZkZi1kOGEwLTRjNDAtOGM4My01YzNlN2QxNzAyZWEiLCJ1c2VydHlwZSI6Ik90aGVyIiwidGltZXpvbmVDb2RlIjoiVVRDKzA3OjAwIiwiaWRHR01lZXQiOiIiLCJpZE1TVGVhbSI6IiIsImlkWm9vbSI6IiIsImF2YXRhciI6IiIsInBlcm1pc3Npb25zIjoie30iLCJzY29wZSI6WyJBdXRoZW50aWNhdGlvbiIsIkF1dGhvcml6YXRpb24iLCJIciIsIkxNUyIsIkxvY2FsaXphdGlvbiIsIkxvZyIsIk5hdmlnYXRpb24iLCJOb3RpZmljYXRpb24iLCJUZXN0Iiwib2ZmbGluZV9hY2Nlc3MiXSwiYW1yIjpbInBhc3N3b3JkIl19.ql5yeQzgtYkL7wcW25ImfUZ1OceQVL5rAAFj6u34RPWXeCxtZD_KmkTfSTxiBAzMcu7AkJ_a09ZHoOrquQwcuQLArWP9KsRZ21eUEHHKwTMKHtHgBMdXT2P_oqrOWIEkZKydL-d7dkYyCd8ypCOg6VnHLGrOI2V4DGzIWaYg5ONBAUi2oWF_F17Bx67W3kq4rPJvFjNvRyaJdc19hVgX-l6fk0BzstfU0mok9VL8xaQdhXiN3IKWq3oF58YQ3D44n_ZMrphaLIkzhNgfoI73yXBqGPikktIKbZxNX82ZNwg0GS6IPDzBS0pzRmaW_eij7XknKF9vAOmjtjtOjr-cDsSYmNQItrKp6OkwmEvUcco8Bhnp2oeP7nzbPGNUByWcH467QE6vmD2Qfb3Hnmkiw_3fAnI9uOxkXxmPFHMzHLl1rmNZ9NRI-7tzQ-GWc-pHGrZ2ldsSY-mkctjxSYRHCbJ8xpnwPpKYuYIozrYpy1VQrNH2KIFTHpTHUWs1T6Qpwbp_oGchV-BO3sSGNB29s0oCGvg339JIFz5rg5hsO-ArduX__A_JJRM6eYNbijTxRBM3PFqkV5oU32yxdOiozM6X9cAGZMJzVGHI9BB5_XL7_ZLZvlOKrCiSafQtnLBFnEbTp1hwBOd16_mce-sw6-_bNFWxamaknsDltbdGpaA";
         $wsUrl = "wss://lms.vnu.edu.vn/dhqg.test.api/socket/hubs/test?access_token=";
         $headers = [
             "Authorization" => "Bearer ".$token,
@@ -195,7 +244,7 @@ class ResultController extends Controller
 
         }
 
-        return view("resultc", [
+        return view("result", [
             "class_questions" => $class_questions
         ]);
 

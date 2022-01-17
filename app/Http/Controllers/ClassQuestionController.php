@@ -131,13 +131,13 @@ class ClassQuestionController extends Controller
 //                'testFormId' => 'ad7b3363-f4d5-4c05-be6c-07e885d49b94',
 //                'classContentId' => '2b57fccb-95c0-49b3-bb47-8d1a4631fe26'
 //            ],
-                        'b1-nhanthuc' => [
-                'testFormId' => '29270241-5794-4869-ba61-a1285ed12e89',
-                'classContentId' => '331a8f54-2eed-4eb1-8e61-1011cc1f3f38'
+                        'b5-nhanthuc' => [
+                'testFormId' => '3a967ed2-a04a-4844-b8a9-7167a075057c',
+                'classContentId' => 'eea33c28-025c-4f0e-a9b6-02eea5e532f0'
             ],
                         'b1-cuoibai' => [
-                'testFormId' => '29270241-5794-4869-ba61-a1285ed12e89',
-                'classContentId' => '331a8f54-2eed-4eb1-8e61-1011cc1f3f38'
+                'testFormId' => '3ef6e73f-8e13-43ba-8e3e-4a06bd095237',
+                'classContentId' => 'c17571e5-8e2a-44f1-ac6f-19b6fffe44b5'
             ],
 
 

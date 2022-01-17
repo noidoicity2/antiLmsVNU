@@ -6,8 +6,9 @@ $i = 0;
     @foreach($class_questions as $k => $q)
         <?php
         $i++;
+//        {{ htmlspecialchars(trim(strip_tags($q["content"])))}}
         ?>
-        <h5 style="color: darkblue; font-weight: bold">Câu {{$i}} .  {{$q["content"]}} </h5>
+        <h5 style="color: darkblue; font-weight: bold">Câu {{$i}} . {!! $q["content"] !!}   </h5>
         <ul>
             @foreach($q["question"] as $as)
 {{--                @if($q["answer"] == $as["id"])--}}
@@ -24,5 +25,6 @@ $i = 0;
             @endforeach
         </ul>
     @endforeach
+
 
 
