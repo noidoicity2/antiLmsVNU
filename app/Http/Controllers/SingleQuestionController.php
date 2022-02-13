@@ -10,14 +10,7 @@ class SingleQuestionController extends Controller
     // lấy câu hỏi ko theo class
     public function getQuestion()
     {
-        $classNames = [
-            'A2-nhanthuc' => [
-                'testFormId' => '3a967ed2-a04a-4844-b8a9-7167a075057c',
-                'classContentId' => 'eea33c28-025c-4f0e-a9b6-02eea5e532f0'
-            ],
-//
 
-        ];
         $userLogin = [
 //            "username" =>"DDP0603112" ,
 //            "password" =>"qpan020304"
@@ -38,8 +31,8 @@ class SingleQuestionController extends Controller
         $classNames = [
 
             'form' => [
-                'testFormId' => '748f37ce-f03a-4b24-9b72-95591c367167',
-                'classContentId' => '6ff83dda-394e-4d99-b216-ca8b400d3548'
+                'testFormId' => 'a7933a69-a9bd-4ffd-9516-682bbb2871dd',
+                'classContentId' => 'ff6c240b-d3d2-4675-b263-e0636c486d12'
             ],
 
 
@@ -51,16 +44,18 @@ class SingleQuestionController extends Controller
             "Host" => "lms.vnu.edu.vn",
         ];
         $class_questions = [];
+        for($i =0 ; $i < 50;$i ++) {
+            foreach ($classNames as $key => $value) {
+                $response = Http::withHeaders($headers)->get('https://lms.vnu.edu.vn/dhqg.test.api/api/v1/TestClassUserTest/GetPreview', [
+                    'classContentId' => $value['classContentId'],
+                    'testFormId' => $value['testFormId'],
+                    'classUserId' => 'ff5bec44-ecc0-4e96-ba7f-54cd534ef96c'
+                ]);
+                foreach ($response["data"]["dataTest"] as $item) {
 
-        foreach ($classNames as $key => $value) {
-            $response = Http::withHeaders($headers)->get('https://lms.vnu.edu.vn/dhqg.test.api/api/v1/TestClassUserTest/GetPreview', [
-                'classContentId' => $value['classContentId'],
-                'testFormId' => $value['testFormId'],
-                'classUserId' => 'ff5bec44-ecc0-4e96-ba7f-54cd534ef96c'
-            ]);
-            foreach ($response["data"]["dataTest"] as $item) {
+                    $class_questions[$item["question"]["content"]] = $item["question"]["testAnswer"];
+                }
 
-                $class_questions[$item["question"]["content"]] = $item["question"]["testAnswer"];
             }
 
         }

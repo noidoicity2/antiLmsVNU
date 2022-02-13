@@ -13,38 +13,38 @@ class ResultController extends Controller
         $classNames = [
 
             'C6-NhanThuc' => [
-                'testFormId' => 'ae42a2df-321f-447d-947c-9ccd6675da96',
+                'testFormId' => '8ca01708-79a9-4e25-a621-4864be572ef7',
                 'classContentId' => 'dc932376-e4a2-4d4f-8b67-69aca8459308'
             ],
             'C6-Venha' => [
-                'testFormId' => 'a9721109-fc48-4c95-9dda-c64592260343',
+                'testFormId' => 'bc5f7772-661b-4fa2-a6cb-55ea5a0c860b',
                 'classContentId' => 'dc932376-e4a2-4d4f-8b67-69aca8459308'
             ],
 
-//            'B2-nhanthuc' => [
-//                'testFormId' => '2163241c-f2cb-4f93-9b7d-8dca265a1a88',
-//                'classContentId' => 'd345bf43-bdec-4c11-87ac-944affa62f89'
-//            ],
-//            'B2-cuoibai' => [
-//                'testFormId' => '724e7408-2ee3-446f-a72d-b9fae8f9ad21',
-//                'classContentId' => 'b8821f01-782b-493d-abb1-fb0fe832a5ad'
-//            ],
-////
+            'B2-nhanthuc' => [
+                'testFormId' => 'ef2658ce-b59e-4550-b374-7b5b10929f92',
+                'classContentId' => 'd345bf43-bdec-4c11-87ac-944affa62f89'
+            ],
+            'B2-cuoibai' => [
+                'testFormId' => '32056217-3d96-4177-9b8b-65e5ea948661',
+                'classContentId' => 'b8821f01-782b-493d-abb1-fb0fe832a5ad'
+            ],
 //////
+////////
 //            'B3' => [
-//                'testFormId' => '23d584cc-c8dd-4e69-bcc2-ddcaaf87074e',
+//                'testFormId' => 'ba48b2c7-5448-450a-8987-2d6a3f12db26',
 //                'classContentId' => '4b65cecc-243f-43a8-b6ff-42205f58cd00'
 //            ],
 
-//////
+////////
 //            'B4' => [
-//                'testFormId' => '1ad51f76-a9a6-4a7d-a2a0-068416d20741',
+//                'testFormId' => '06b53416-9cb2-4202-877a-912bf452cb7e',
 //                'classContentId' => '69b8db54-56a9-4e0f-9663-3540c7d20546'
 //            ],
-//////
-//////
+////////
+////////
 //            'B5' => [
-//                'testFormId' => 'eea77ae4-65f0-4733-a579-8908f5043138',
+//                'testFormId' => 'dfa5c306-90dc-4aa4-87c7-1e7fc10fcda1',
 //                'classContentId' => 'dc932376-e4a2-4d4f-8b67-69aca8459308'
 //            ],
 //////
